@@ -39,10 +39,11 @@ function App() {
     }
 
     setResult(`${outcome}.`);
-    setMoves(
-      `you <img src="/thumbnails/${playerMove}-emoji.png" class="move-icon"> 
-       <img src="/thumbnails/${computerMove}-emoji.png" class="move-icon"> computer`
-    );
+   setMoves(
+  `you <img src="/thumbnails/${playerMove.toLowerCase()}-emoji.png" class="move-icon" alt="${playerMove}"> 
+   <img src="/thumbnails/${computerMove.toLowerCase()}-emoji.png" class="move-icon" alt="${computerMove}"> computer`
+);
+
 
     setScore((prev) => ({
       wins: outcome === 'Win' ? prev.wins + 1 : prev.wins,
